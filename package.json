@@ -1,0 +1,15 @@
+{
+  "name": "first-staff-ticketing-ai",
+  "version": "1.0.0",
+  "description": "Full-stack staff flight request, approval, vendor quote, ticketing and store debit workflow",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "nodemailer": "^6.10.1"
+  }
+}

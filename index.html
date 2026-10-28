@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#a50e22"><title>FirstStaff | AI Travel Desk</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div id="loginScreen" class="login-screen">
+  <div class="login-art"><div class="brand light"><span class="brand-mark">F</span><span>FirstStaff <b>Travel Desk</b></span></div>
+    <div class="art-copy"><span class="eyebrow">STAFF TRAVEL, SIMPLIFIED</span><h1>From request<br>to take-off.</h1><p>One intelligent workspace for flight requests, approvals, vendor fares, ticketing and store reconciliation.</p>
+      <div class="art-stats"><div><b>01</b><span>Request</span></div><div><b>02</b><span>Approve</span></div><div><b>03</b><span>Travel</span></div></div>
+    </div><div class="plane-art">✈</div><small class="login-foot">INTERNAL STAFF WORKFLOW • DEMO ENVIRONMENT</small>
+  </div>
+  <div class="login-panel"><div class="login-mobile-brand brand"><span class="brand-mark">F</span><span>FirstStaff <b>Travel Desk</b></span></div>
+    <div class="login-form-wrap"><span class="eyebrow red">WELCOME BACK</span><h2>Sign in to your desk</h2><p class="muted">Use your assigned role account to access the workflow.</p>
+      <form id="loginForm"><label>Email address<input id="loginEmail" type="email" required placeholder="name@firststaff.local" autocomplete="username"></label><label>Password<div class="password-wrap"><input id="loginPassword" type="password" required placeholder="Enter your password" autocomplete="current-password"><button type="button" id="togglePassword" class="eye-btn">Show</button></div></label><button class="btn btn-primary full" type="submit">Sign in <span>→</span></button><p id="loginError" class="error"></p></form>
+      <div class="demo-box"><b>Demo access</b><p>Staff: staff@firststaff.local / Staff@123</p><button type="button" id="showDemo" class="text-btn">View all demo roles</button><div id="demoRoles" hidden><p>Executive: executive@firststaff.local / Exec@123</p><p>Vendor: vendor@firststaff.local / Vendor@123</p><p>Ticketing: ticketing@firststaff.local / Ticket@123</p><p>Protocol: protocol@firststaff.local / Protocol@123</p><p>Store: store@firststaff.local / Store@123</p><p>Procurement: procurement@firststaff.local / Procure@123</p><p>Admin: admin@firststaff.local / Admin@123</p></div></div>
+    </div><small class="login-legal">Secure internal workflow prototype. Do not enter real passenger data in this demo.</small>
+  </div>
+</div>
+<div id="app" class="app-shell" hidden>
+  <aside class="sidebar" id="sidebar"><div class="brand light"><span class="brand-mark">F</span><span>FirstStaff <b>Travel Desk</b></span></div>
+    <div class="workspace-label">WORKSPACE</div><nav id="nav"><button class="nav-item active" data-view="overview"><span>▦</span> Overview</button><button class="nav-item" data-view="requests"><span>▤</span> Flight requests <i id="requestBadge" class="nav-badge">0</i></button><button class="nav-item" data-view="new-request" id="newRequestNav"><span>＋</span> New request</button><button class="nav-item" data-view="notifications"><span>♧</span> Notifications <i id="notificationBadge" class="nav-badge">0</i></button><button class="nav-item" data-view="ledger" id="ledgerNav" hidden><span>▧</span> Store ledger</button></nav>
+    <div class="sidebar-bottom"><div class="help-card"><div class="help-icon">✦</div><b>Travel Desk Assist</b><p>Keep every travel step visible, from approval to reconciliation.</p></div><div class="user-mini"><div class="avatar" id="sideAvatar">TA</div><div><b id="sideName">Staff user</b><span id="sideRole">Staff</span></div><button id="logoutBtn" title="Sign out">↪</button></div></div>
+  </aside>
+  <main class="main-area"><header class="topbar"><button id="menuBtn" class="icon-btn mobile-menu">☰</button><div class="crumb">Travel Management <span>/</span> <b id="pageCrumb">Overview</b></div><div class="top-actions"><span class="system-status"><i></i> Workflow online</span><button class="icon-btn" id="bellBtn" title="Notifications">♧<i id="bellDot"></i></button><div class="avatar top-avatar" id="topAvatar">TA</div></div></header>
+    <div class="content" id="content"><div class="loading">Preparing your workspace…</div></div>
+    <footer>FirstStaff Travel Desk <span>•</span> Internal workflow prototype <span class="footer-right">Designed for controlled staff travel processing</span></footer>
+  </main>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<div id="modalRoot"></div>
+<script src="/app.js"></script>
+</body></html>
